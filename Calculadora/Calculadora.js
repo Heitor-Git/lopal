@@ -1,4 +1,4 @@
-function Calculadora (){
+function Calculadora(){
     while(true){
             let resultado = 0.0;
             let operando1;
@@ -19,28 +19,30 @@ function Calculadora (){
                 resultado = operando1 * operando2;
             } else if ( operador == "/"){
                 resultado = operando1 / operando2;
-            } else if (operador == "/"){
+            } else if (operador === "/"){
                 if (operando2 == 0){
                     alert("Não é possível dividir por zero.");
                     continua = prompt("Digite sim para continuar e não para encerrar.");
                     if( continua == "não" ){
                         return
                 }
+
             } else {
-                resultado = operando1 / operando2;
+            resultado = operando1 / operando2;
             }
 
         } else {
             alert("Operador Inválido!");
             operador_valido = false;
             continua = prompt("Digite sim para continuar e não para encerrar.")
-            if( continua == "não"){
+            if(continua === "não"){
                     return
                 }
         }
-        if( operador != "/" || && operando2 == 0 ){
+
+        if( (operador != "/" || operando2 != 0) && (operador_valido != false) ){
             alert("Resultado: " +
-                operando1 + " " + operador + " " + operando2 + " = " + resultado);
-        }    
+            operando1 + " " + operador + " " + operando2 + " = " + resultado);
+        }
     }   
 }
