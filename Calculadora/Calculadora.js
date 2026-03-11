@@ -38,7 +38,7 @@ function Calculadora (){
                     return
                 }
         }
-        if( operador != "/" || operando2 != 0 ){
+        if( operador != "/" || && operando2 == 0 ){
             alert("Resultado: " +
                 operando1 + " " + operador + " " + operando2 + " = " + resultado);
         }    
