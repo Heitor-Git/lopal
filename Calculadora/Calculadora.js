@@ -11,37 +11,34 @@ function Calculadora(){
             operando2 = parseFloat( prompt("Digite o segundo número: ") );
             operador = prompt("Digite uma das operações ( + - * / ): ");
 
-            if ( operador == "+" ){
+            if ( operador === "+" ){
                 resultado = operando1 + operando2;
-            } else if ( operador == "-"){
+            } else if ( operador === "-"){
                 resultado = operando1 - operando2;
-            } else if ( operador == "*" ){
+            } else if ( operador === "*" ){
                 resultado = operando1 * operando2;
-            } else if ( operador == "/"){
+            } else if ( operador === "/"){
                 resultado = operando1 / operando2;
             } else if (operador === "/"){
                 if (operando2 == 0){
                     alert("Não é possível dividir por zero.");
                     continua = prompt("Digite sim para continuar e não para encerrar.");
-                    if( continua == "não" ){
+                    if( continua === "não" ){
                         return
                 }
-
             } else {
             resultado = operando1 / operando2;
             }
-
         } else {
             alert("Operador Inválido!");
             operador_valido = false;
-            continua = prompt("Digite sim para continuar e não para encerrar.")
+            continua = prompt("Digite sim para continuar e não para encerrar.");
             if(continua === "não"){
                     return
                 }
         }
-
-        if( (operador != "/" || operando2 != 0) && (operador_valido != false) ){
-            alert("Resultado: " +
+        if( (operador != "/" || operando2 != 0) && operador_valido != false ){
+            alert("Resultado: " + 
             operando1 + " " + operador + " " + operando2 + " = " + resultado);
         }
     }   
